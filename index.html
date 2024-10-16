@@ -13,37 +13,43 @@
     <nav class="nav-bar">
         <div class="nav-main">
             <a class="btn-1">Sai Chittala</a>
-            <div class="nav-btns">
+            <div class="toggle" onclick="toggleMenu()">
+            <img src="img/menu.svg" alt="menu-icon">
+            </div>
+            <div class="nav-btns hidden" id="navBtns">
                 <a class="btn-1">About</a>
                 <a class="btn-1">Resume</a>
             </div>
         </div>
-        </div>
     </nav>
 
     <main>
-        <section>
+        <section class="fade-in">
             <div class="full-bg">
                 <div class="bg-main">
-                    <div class="main-card" style="background-image: url('img/sample.jpg'); background-size: cover; background-position: center;">
+                    <div class="main-card fade-in"
+                        style="background-image: url('img/sample.jpg'); background-size: cover; background-position: center;">
                         <div class="sub-card">
                             <a class="main-heading"> Ricoz</a>
                             <a class="heading-type"> Branding</a>
                         </div>
                     </div>
-                    <div class="main-card" style="background-image: url('img/sample.jpg'); background-size: cover; background-position: center;">
+                    <div class="main-card fade-in"
+                        style="background-image: url('img/sample.jpg'); background-size: cover; background-position: center;">
                         <div class="sub-card">
                             <a class="main-heading"> Ricoz</a>
                             <a class="heading-type"> Branding</a>
                         </div>
                     </div>
-                    <div class="main-card" style="background-image: url('img/sample.jpg'); background-size: cover; background-position: center;">
+                    <div class="main-card fade-in"
+                        style="background-image: url('img/sample.jpg'); background-size: cover; background-position: center;">
                         <div class="sub-card">
                             <a class="main-heading"> Ricoz</a>
                             <a class="heading-type"> Branding</a>
                         </div>
                     </div>
-                    <div class="main-card" style="background-image: url('img/sample.jpg'); background-size: cover; background-position: center;">
+                    <div class="main-card fade-in"
+                        style="background-image: url('img/sample.jpg'); background-size: cover; background-position: center;">
                         <div class="sub-card">
                             <a class="main-heading"> Ricoz</a>
                             <a class="heading-type"> Branding</a>
@@ -52,7 +58,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="fade-in">
             <div class="full-bg " data-scroll-container>
                 <div class="bg-about">
                     <a class="about-div-heading">About </a>
@@ -60,27 +66,26 @@
                         <div class="about-img">
                             <img src="img/sample.jpg" alt="about-img">
                         </div>
-                            <div class="about-content">
-                                <a class="about-main-heading"> Sai Chittala </a>
-                                <a class="about-description">Sai Chittala is a designer at CustomFurnish.
-                                    He designs digital products with immersive technology. Storytelling and prototyping is his jam. Past: Ricoz, Upwork.</a>
-                                    <span class="btn-1" >Connect Now </span>
-                            </div>
+                        <div class="about-content">
+                            <a class="about-main-heading"> Sai Chittala </a>
+                            <a class="about-description">Sai Chittala is a designer at CustomFurnish. He designs digital products with immersive technology. Storytelling and prototyping is his jam. Past: Ricoz, Upwork.</a>
+                            <span class="btn-3" >Connect Now </span>
                         </div>
                     </div>
+                </div>
         </section>
     </main>
     <main>
         <footer>
-            <section>
+            <section class="fade-in">
                 <div class="full-bg">
                     <div class="bg-footer">
                         <div class="footer-main">
-                            <a class="btn-1">@Sai Chittala - 2024</a>
-                            <a class="btn-2">Linkedin</a>
-                            <a class="btn-2">Upwork</a>
+                            <a class="btn-1 mob-btn-1">@Sai Chittala - 2024</a>
+                            <a class="btn-2 mob-btn-1">Linkedin</a>
+                            <a class="btn-2 mob-btn-1">Upwork</a>
                         </div>
-                        <a class="btn-1" id="backToTop">BACK TO TOP</a>
+                        <a class="btn-1 mob-btn-2" id="backToTop">BACK TO TOP</a>
                     </div>
                 </div>
             </section>
