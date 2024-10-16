@@ -50,3 +50,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.getElementById("loader");
+    const loadingText = document.getElementById("loading-text");
+    
+    let progress = 0;
+    
+    const loadingInterval = setInterval(() => {
+        if (progress >= 100) {
+            clearInterval(loadingInterval);
+            loader.style.opacity = '0'; // Fade out loader
+            setTimeout(() => {
+                loader.style.display = 'none'; // Hide after fade
+            }, 500); // Match this duration with CSS transition
+        } else {
+            progress += Math.random() * 5; // Random increment for smoothness
+            loadingText.textContent = `Loading... ${Math.min(Math.round(progress), 100)}%`;
+            loadingText.style.transform = `translateY(${Math.sin(progress / 100 * Math.PI) * 10}px)`; // Smooth bounce effect
+        }
+    }, 50); // Adjust time for loading speed
+});
