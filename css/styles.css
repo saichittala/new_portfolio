@@ -387,22 +387,22 @@ a {
 
 
 ::-webkit-scrollbar {
-    width: 6px; /* Width of the scrollbar */
-    height: 6px; /* Height of the scrollbar */
+    width: 6px; 
+    height: 6px; 
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--secondary-color); /* Color of the track */
-    border-radius: 99px; /* Rounded corners for track */
+    background: var(--secondary-color); 
+    border-radius: 99px; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--text-color); /* Color of the scrollbar thumb */
-    border-radius: 99px; /* Rounded corners for thumb */
+    background: var(--text-color); 
+    border-radius: 99px; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--black-2-color); /* Color of the thumb on hover */
+    background: var(--black-2-color); 
 }
 
 
@@ -498,6 +498,10 @@ a {
         display: block;
     }
 
+    .cards-container {
+        gap: 48px;
+    }
+
     .about-content {
         padding: 20px;
     }
@@ -543,4 +547,6 @@ a {
     .menu-icon.clicked {
         transform: scale(0.98); /* Scale effect on click */
     }
+
+
 }
