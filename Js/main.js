@@ -8,6 +8,13 @@ document.getElementById('backToTop').addEventListener('click', function (event) 
     });
 });
 
+// Scroll to About
+
+document.getElementById("about-button").addEventListener("click", function () {
+    document.getElementById("about-section").scrollIntoView({ behavior: "smooth" });
+});
+
+
 // Nav Bar When Scrolled
 
 
@@ -21,11 +28,7 @@ window.addEventListener('scroll', function () {
 });
 
 
-function toggleMenu() {
-    const navBtns = document.getElementById('navBtns');
-    navBtns.classList.toggle('hidden');
-}
-
+// Animation
 
 document.addEventListener('DOMContentLoaded', function () {
     const fadeIns = document.querySelectorAll('.fade-in');
@@ -51,25 +54,69 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// // Loading
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const loader = document.getElementById("loader");
+//     const loadingText = document.getElementById("loading-text");
+
+//     let progress = 0;
+
+//     const loadingInterval = setInterval(() => {
+//         if (progress >= 100) {
+//             clearInterval(loadingInterval);
+//             loader.style.opacity = '0'; // Fade out loader
+//             setTimeout(() => {
+//                 loader.style.display = 'none'; // Hide after fade
+//             }, 500); // Match this duration with CSS transition
+//         } else {
+//             progress += Math.random() * 5; // Random increment for smoothness
+//             loadingText.textContent = `Loading... ${Math.min(Math.round(progress), 100)}%`;
+//             loadingText.style.transform = `translateY(${Math.sin(progress / 100 * Math.PI) * 10}px)`; // Smooth bounce effect
+//         }
+//     }, 50); // Adjust time for loading speed
+// });
+
+// Scroll to about
+
+function scrollToAbout() {
+    document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
+}
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const loader = document.getElementById("loader");
-    const loadingText = document.getElementById("loading-text");
-    
-    let progress = 0;
-    
-    const loadingInterval = setInterval(() => {
-        if (progress >= 100) {
-            clearInterval(loadingInterval);
-            loader.style.opacity = '0'; // Fade out loader
-            setTimeout(() => {
-                loader.style.display = 'none'; // Hide after fade
-            }, 500); // Match this duration with CSS transition
-        } else {
-            progress += Math.random() * 5; // Random increment for smoothness
-            loadingText.textContent = `Loading... ${Math.min(Math.round(progress), 100)}%`;
-            loadingText.style.transform = `translateY(${Math.sin(progress / 100 * Math.PI) * 10}px)`; // Smooth bounce effect
-        }
-    }, 50); // Adjust time for loading speed
+// Scroll to top on page load
+window.addEventListener('load', function () {
+    window.scrollTo(0, 0);
 });
+
+
+// Nav Container Mobile
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const menuContainer = document.getElementById('menu-container');
+
+    menuIcon.addEventListener('click', function() {
+        // Toggle the clicked class for scaling effect
+        menuIcon.classList.toggle('clicked');
+
+        // Check if the menu container is currently visible
+        if (menuContainer.classList.contains('active')) {
+            // Hide the menu container
+            menuContainer.classList.remove('active');
+            // Wait for the fade-out to finish before setting display to none
+            setTimeout(() => {
+                menuContainer.style.display = 'none'; // Hide after fade out
+            }, 500); // Match with the CSS transition duration
+            menuIcon.src = 'img/menu.svg'; // Change back to menu icon
+        } else {
+            // Show the menu container
+            menuContainer.style.display = 'block'; // Set display to block
+            setTimeout(() => {
+                menuContainer.classList.add('active'); // Start fade-in and slide down
+            }, 10); // Small delay to ensure display is applied first
+            menuIcon.src = 'img/close.svg'; // Change to close icon
+        }
+    });
+});
+
