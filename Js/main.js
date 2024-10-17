@@ -79,9 +79,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Scroll to about
 
-function scrollToAbout() {
-    document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
-}
+document.addEventListener('DOMContentLoaded', function() {
+    function scrollToAbout() {
+        document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Event listeners
+    document.getElementById('about-button').addEventListener('click', scrollToAbout);
+});
+
 
 
 // Scroll to top on page load

@@ -16,6 +16,8 @@
     --teritiary-color: #E0E0E0;
     --text-color: #D0D0D0;
     --border-color: #DDDDDD;
+    --grey-bg-w-color: #606060;
+    --grey-bg-b-color: #808080;
 
     /* Responsive */
 
@@ -461,13 +463,13 @@ a {
     }
 
     .bg-main {
-        padding: 80px 0;
+        padding: 150px+ 0;
         gap: 40px;
     }
 
     .menu-container {
         display: flex;
-        top: 52px;
+        top: 69px;
         left: 0;
         padding: 40px 24px;
         justify-content: flex-start;

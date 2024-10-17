@@ -1,0 +1,127 @@
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.breadcrumb {
+    display: flex;
+    gap: 10px;
+}
+
+.b-active {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.b-inactive {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--grey-bg-b-color);
+}
+
+.b-inactive:hover {
+    color: var(--black-2-color);
+    cursor: pointer;
+}
+
+.pd-heading-main-div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 40%;
+}
+
+.pd-main-heading {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.pd-sub-heading {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--grey-bg-b-color);
+}
+
+
+
+.pd-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.pd-heading-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0;
+}
+
+.pd-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.p-img-1 {
+    width: 100%;
+    height: 80vh;
+    border-radius: 36px;
+}
+
+.p-img-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 36px;
+}
+
+.p-img-2 {
+    width: 100%;
+    height: 60vh;
+    border-radius: 36px;
+}
+
+.p-img-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 36px;
+}
+
+.pd-main-heading-2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.pd-sub-heading-2 {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--grey-bg-b-color);
+    margin-bottom: 16px;
+}
+
+
+.p-main-imgs {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.p-2imgs-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
