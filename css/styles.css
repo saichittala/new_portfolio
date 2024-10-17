@@ -204,7 +204,7 @@ body {
     width: 100%;
     border-radius: 36px;
     min-height: fit-content;
-    flex: 1 1 50%;
+    flex: 1 1 30%;
     box-sizing: border-box;
     display: flex;
 }
@@ -229,7 +229,7 @@ body {
     gap: 20px;
     background-color: var(--secondary-color);
     border-radius: 36px;
-    flex: 1 1 50%;
+    flex: 1 1 70%;
     box-sizing: border-box;
 }
 
@@ -361,12 +361,12 @@ body {
 }
 
 .translate-text-down {
-    transform: translateY(40px);
+    transform: translateY(20px);
     transition: opacity 1.5s ease-in-out transform 1.5s;
 }
 
 .translate-text-up {
-    transform: translateY(-40px);
+    transform: translateY(-20px);
     transition: opacity 1.5s ease-in-out transform 1.5s;
 }
 
@@ -487,9 +487,9 @@ a {
         left: 0;
         padding: 40px 24px;
         justify-content: flex-start;
-        transform: translateY(-20px); /* Start slightly above the original position */
-        transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for fading and sliding */
-        opacity: 0; /* Start invisible for fade effect */
+        transform: translateY(-20px); 
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+        opacity: 0; 
     }
 
     .mob-nav-btns {
@@ -574,3 +574,4 @@ a {
     }
 
 }
+

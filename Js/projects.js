@@ -13,12 +13,12 @@ const container = document.getElementById('cards-container');
 cardsData.forEach(card => {
     // Create a card div
     const cardDiv = document.createElement('div');
-    cardDiv.className = 'main-card';
+    cardDiv.className = 'main-card fade-in';
     cardDiv.style.backgroundImage = `url(${card.image})`;
 
     // Insert content inside the card
     cardDiv.innerHTML = `
-        <div href="${card.link}" class="sub-card">
+        <div href="${card.link}" class=" sub-card " >
             <div class="main-heading">${card.title}</div>
             <div class="heading-type">${card.type}</div>
         </div>

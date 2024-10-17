@@ -10,11 +10,26 @@ document.getElementById('backToTop').addEventListener('click', function (event) 
 
 // Scroll to About
 
-document.querySelectorAll(".about-button").forEach(button => {
-    button.addEventListener("click", function () {
+// Check for the presence of the "about-section" in the URL hash
+document.addEventListener("DOMContentLoaded", function () {
+    // Scroll to the about section if the hash exists
+    if (window.location.hash === "#about-section") {
         document.getElementById("about-section").scrollIntoView({ behavior: "smooth" });
+    }
+});
+
+// Add event listener for buttons
+document.querySelectorAll(".about-button").forEach(button => {
+    button.addEventListener("click", function (event) {
+        // Check if the current page is the index.html
+        if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+            event.preventDefault(); // Prevent default anchor link behavior
+            document.getElementById("about-section").scrollIntoView({ behavior: "smooth" });
+        }
+        // If on another page, allow normal navigation (let the browser handle it)
     });
 });
+
 
 
 // Nav Bar When Scrolled
@@ -54,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(fadeIn); // Observe each fade-in section
     });
 });
+
 
 
 // // Loading
