@@ -529,6 +529,15 @@ a {
     .btn-3 {
         width: fit-content;
     }
+    
+    .btn-1:active, .btn-2:active, .btn-3:active {
+        transform: scale(0.9) !important;
+    }
+    
+    .main-card:active {
+        transform: scale(0.9) !important;
+    }
+
 
     .mob-btn-1 {
         background-color: unset !important;
