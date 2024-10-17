@@ -57,12 +57,17 @@
 .pd-heading-div {
     display: flex;
     flex-direction: column;
+    width: 40%;
+}
+.pd-heading-sub-div {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
 p {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 28px;
     margin: 0;
 }
@@ -124,4 +129,37 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+}
+
+@media (max-width:674px) {
+
+    .project-details {
+        gap: 56px;
+    }
+
+    .pd-main {
+        flex-direction: column;
+    }
+
+    .pd-heading-div {
+        width: 100%;
+    }
+
+    .pd-content {
+        width: 100%;
+    }
+
+    .pd-heading-main-div {
+        flex-direction: row;
+        gap: 24px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .p-main-imgs {
+        gap: 24px;
+    }
+    .p-2imgs-2 {
+        gap: 24px;
+        grid-template-columns: 1fr;
+    }
 }

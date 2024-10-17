@@ -10,8 +10,10 @@ document.getElementById('backToTop').addEventListener('click', function (event) 
 
 // Scroll to About
 
-document.getElementById("about-button").addEventListener("click", function () {
-    document.getElementById("about-section").scrollIntoView({ behavior: "smooth" });
+document.querySelectorAll(".about-button").forEach(button => {
+    button.addEventListener("click", function () {
+        document.getElementById("about-section").scrollIntoView({ behavior: "smooth" });
+    });
 });
 
 
@@ -76,17 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //         }
 //     }, 50); // Adjust time for loading speed
 // });
-
-// Scroll to about
-
-document.addEventListener('DOMContentLoaded', function() {
-    function scrollToAbout() {
-        document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Event listeners
-    document.getElementById('about-button').addEventListener('click', scrollToAbout);
-});
 
 
 
